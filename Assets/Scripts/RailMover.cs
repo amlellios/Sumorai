@@ -8,7 +8,7 @@ public class RailMover : MonoBehaviour
     public Transform lookAt;
     private Transform thisTransform;
     public bool smoothMove = true;
-    public float moveSpeed = 10.0f;
+    public float moveSpeed = 4.0f;
 
 
     private Vector3 lastPosition;
