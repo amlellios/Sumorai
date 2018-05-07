@@ -6,11 +6,11 @@ public class RailMover : MonoBehaviour
 {
     public Rail rail;
     public Transform lookAt;
-    private Transform thisTransform;
     public bool smoothMove = true;
-    public float moveSpeed = 4.0f;
+    public float moveSpeed = 5.0f;
 
-
+    private Transform thisTransform;
+    
     private Vector3 lastPosition;
 
 
@@ -21,22 +21,27 @@ public class RailMover : MonoBehaviour
     private void Start()
     {
         thisTransform = transform;
-        lastPosition = thisTransform.position;
+        lastPosition= thisTransform.position ;
 
     }
 
 
     private void Update()
     {
-
+        
 
         if(smoothMove)
         {
             lastPosition = Vector3.Lerp(lastPosition, rail.ProjectPositionOnRail(lookAt.position), Time.deltaTime);
             thisTransform.position = lastPosition;
+            
+        }
+        else
+        {
+            thisTransform.position = rail.ProjectPositionOnRail(lookAt.position);
+
         }
            
-        thisTransform.position = rail.ProjectPositionOnRail(lookAt.position);
 
 
         thisTransform.LookAt(lookAt.position);

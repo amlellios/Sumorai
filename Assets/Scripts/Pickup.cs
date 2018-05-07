@@ -4,39 +4,27 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    [SerializeField]
-    private string nameText;
-
-    //[name of editor tag thing]
     
 
-
     private MeshRenderer meshRenderer;
+    
     private Collider collider;
-    private List<Pickup> playerInventory;
 
 
-   
-    public string NameText
+
+    private void Start()
     {
-        get
-        {
-            return nameText;
-        }
+        
+        meshRenderer = GetComponent<MeshRenderer>();
+        collider = GetComponent<Collider>();
     }
-
-    public void Ontrigger()
+    public void OnTriggerEnter(Collider other)
     {
-        playerInventory.Add(this);
+        //PlayerInventory.Add(this);
+      
+
+       
         meshRenderer.enabled = false;
         collider.enabled = false;
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-       // playerInventory = FindObjectOfType<InventoryMenu>().PlayerInventory;
-        collider = GetComponent<Collider>();
-        meshRenderer = GetComponent<MeshRenderer>();
     }
 }
