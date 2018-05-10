@@ -22,7 +22,7 @@ public class PickupFood : MonoBehaviour
     {
         //PlayerInventory.Add(this);
 
-        //Player.playerSpeed *= 1.5f;
+
         meshRenderer.enabled = false;
         collider.enabled = false;
     }

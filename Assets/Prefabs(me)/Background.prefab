@@ -325,7 +325,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1755414389131106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.40291, y: 302.41235, z: 662.8125}
+  m_LocalPosition: {x: -94, y: 302.41235, z: 991}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 4588675850268158}
@@ -351,7 +351,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940329910289584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -456.5971, y: 110.41237, z: 299.8125}
+  m_LocalPosition: {x: -518, y: 39, z: 487}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 4588675850268158}
@@ -403,7 +403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247599086838516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 190.59709, y: 85.58763, z: 131.1875}
+  m_LocalPosition: {x: 190.59709, y: 85.58763, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4621279035004138}
@@ -452,7 +452,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786778804933310}
   m_LocalRotation: {x: -0.178664, y: -0.68416315, z: -0.68416315, w: 0.178664}
-  m_LocalPosition: {x: -149.16653, y: -126.887634, z: 97.87857}
+  m_LocalPosition: {x: -149.16653, y: -126.887634, z: 276}
   m_LocalScale: {x: 40.00002, y: 40.000015, z: 40.000015}
   m_Children: []
   m_Father: {fileID: 4588675850268158}
@@ -956,6 +956,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1da353243062479a9b31c85074a796b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 0}
+  waterQuality: 2
+  edgeBlend: 1
 --- !u!114 &114085374152508368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -967,6 +970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflection: {fileID: 114222275996339378}
+  waterBase: {fileID: 114005425852464106}
 --- !u!114 &114222275996339378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -978,6 +983,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4185bc77c7194462ca3b1097ef4a5de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflectionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  reflectSkybox: 0
+  clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  reflectionSampler: _ReflectionTex
+  clipPlaneOffset: 0.07
 --- !u!114 &114358654722838642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -989,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflection: {fileID: 114222275996339378}
+  waterBase: {fileID: 114005425852464106}
 --- !u!114 &114645985140962074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1000,6 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2ab2b9ac93bb544b9552e49030371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specularLight: {fileID: 0}
 --- !u!114 &114899928115143808
 MonoBehaviour:
   m_ObjectHideFlags: 1

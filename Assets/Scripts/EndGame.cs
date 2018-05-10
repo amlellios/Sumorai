@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGame : MonoBehaviour {
+public class EndGame : MonoBehaviour
+{
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-
-            //LoadScene.
-
-        }
-
-
+     
+            //If a gameObject with the tag "Player" enters this trigger, load a scene.
+            if (gameObject.tag == "Player")
+            {
+                Application.LoadLevel("Credits");
+            }
     }
+
+
 }
+

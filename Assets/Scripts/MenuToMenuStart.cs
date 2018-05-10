@@ -7,9 +7,13 @@ using UnityEngine.SceneManagement;
 public class MenuToMenuStart : MonoBehaviour
 {
 
-    public void StartButtonClicked()
+    public void OnStartClick()
     {
-        // Load the next scene.
         SceneManager.LoadScene("MenuStart");
+    }
+   
+    public void OnQuitClick()
+    {
+        Application.Quit();
     }
 }
